@@ -1,0 +1,69 @@
+{ pkgs, ... }:
+{
+
+  programs.neovim = {
+    enable = false;
+    defaultEditor = true;
+    extraPackages = [
+          pkgs.LazyVim
+          pkgs.bufferline-nvim
+          pkgs.catppuccin-nvim
+          pkgs.clangd_extensions-nvim
+          pkgs.cmp-buffer
+          pkgs.cmp-nvim-lsp
+          pkgs.cmp-nvim-ultisnips
+          pkgs.cmp-path
+          pkgs.cmp_luasnip
+          pkgs.conform-nvim
+          pkgs.crates-nvim
+          pkgs.csharpls-extended-lsp-nvim
+          pkgs.cyberdream-nvim
+          pkgs.dashboard-nvim
+          pkgs.diffview-nvim
+          pkgs.dracula-nvim
+          pkgs.dressing-nvim
+          pkgs.friendly-snippets
+          pkgs.gitsigns-nvim
+          pkgs.gruber-darker-nvim
+          pkgs.gruvbox-nvim
+          pkgs.indent-blankline-nvim
+          pkgs.kanagawa-nvim
+          pkgs.lazy-nvim
+          pkgs.lualine-nvim
+          pkgs.luasnip
+          pkgs.mason-lspconfig-nvim
+          pkgs.mason-nvim
+          pkgs.miasma-nvim
+          pkgs.mini-nvim
+          pkgs.neo-tree-nvim
+          pkgs.noice-nvim
+          pkgs.nui-nvim
+          pkgs.nvim-cmp
+          pkgs.nvim-dap
+          pkgs.nvim-dap-go
+          pkgs.nvim-dap-python
+          pkgs.nvim-dap-ui
+          pkgs.nvim-dap-virtual-text
+          pkgs.nvim-lint
+          pkgs.nvim-lspconfig
+          pkgs.nvim-nio
+          pkgs.nvim-notify
+          pkgs.nvim-treesitter
+          pkgs.nvim-treesitter-textobjects
+          pkgs.nvim-ts-autotag
+          pkgs.omnisharp-extended-lsp-nvim
+          pkgs.onedark-nvim
+          pkgs.persistence-nvim
+          pkgs.plenary-nvim
+          pkgs.rustaceanvim
+          pkgs.telescope-fzf-native-nvim
+          pkgs.telescope-nvim
+          pkgs.todo-comments-nvim
+          pkgs.toggleterm-nvim
+          pkgs.tokyonight-nvim
+          pkgs.trouble-nvim
+          pkgs.ultisnips
+          pkgs.which-key-nvim
+    ];
+  };
+}
