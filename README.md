@@ -74,11 +74,10 @@ Name=Hyprland
 
 Log out and select Hyprland in SDDM.  Enjoy!
 
-To delete stop nix-daemon
+To remove:
+```
 sudo systemclt stop nix-daemon
 sudo systemclt disable nix-daemon
-
-3. Delete the files Nix added to your system:
-
-sudo rm -rf "/etc/nix" "/nix" "/root/.nix-profile" "/root/.nix-defexpr" "/root/.nix-channels" "/root/.local/state/nix" "/root/.cache/nix" "/home/ded/.nix-profile" "/home/ded/.nix-defexpr" "/home/ded/.nix-channels" "/home/ded/.local/state/nix" "/home/ded/.cache/nix"
+sudo rm -rf "/etc/nix" "/nix" "/root/.nix-profile" "/root/.nix-defexpr" "/root/.nix-channels" "/root/.local/state/nix" "/root/.cache/nix" "/home/$USER/.nix-profile" "/home/$USER/.nix-defexpr" "/home/$USER/.nix-channels" "/home/$USER/.local/state/nix" "/home/$USER/.cache/nix"
+```
 
