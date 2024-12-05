@@ -3,7 +3,7 @@
 
   programs.neovim = {
     enable = false;
-    defaultEditor = true;
+    defaultEditor = false;
     extraPackages = [
           pkgs.LazyVim
           pkgs.bufferline-nvim

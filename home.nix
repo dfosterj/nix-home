@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "ded";
@@ -54,7 +55,6 @@
     pkgs.swaybg
     pkgs.swww
     pkgs.unzip
-    pkgs.vimPlugins.vim-plug
     pkgs.vscodium
     pkgs.waybar
     pkgs.wl-clipboard

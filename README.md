@@ -1,15 +1,7 @@
 # nix-home
 ## Installation
-In theory these installation steps should work on any distro (except nixOS), however I have only tested this on Debian 12.  
-If attempting on another distro, you will need to adjust some of the commands for your package manager.
-This guide also assumes you are using SDDM, which is the default when using Plasma.
+use nix homemanager simply as a pkg management, to work with my dotfiles and be linux fluid
 
-First run some updates and install some programs you'll need:
-```bash
-sudo apt update
-sudo apt upgrade
-sudo apt install curl vim
-```
 
 [Install the Nix package manager](https://nixos.org/download/):
 ```bash
@@ -45,10 +37,15 @@ cd nix-home
 Use vim (or whatever text editor you prefer) to edit `home.nix` and change the first few lines from `ded` to your own user:
 > NOTE: Use command `whoami` if you don't know your username
 
-> NOTE: There are probably many refences to the `ded` user in this file and potentially others like `.zshrc`... sorry you're gonna have to find and replace these
+> NOTE: hardcoded my user's name. sed all 'ded'. TODO: make username var throughout
 ```
   home.username = "ded";
   home.homeDirectory = "/home/ded";
+```
+
+clone repo to your user's home-manager config dir
+```bash
+git clone https://github.com/dfosterj/nix-hom ~/.config/home-manager
 ```
 
 Copy these files to your home config:
