@@ -2,7 +2,7 @@
 {
 
   programs.neovim = {
-    enable = false;
+    enable = true;
     defaultEditor = false;
     extraPackages = [
           pkgs.LazyVim

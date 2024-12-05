@@ -46,8 +46,6 @@
     pkgs.procps
     pkgs.psmisc
     pkgs.ripgrep
-    pkgs.rofi-power-menu
-    pkgs.rofi-wayland
     pkgs.skim
     pkgs.spotify
     pkgs.starship
@@ -59,5 +57,6 @@
     pkgs.waybar
     pkgs.wl-clipboard
     pkgs.yazi
+    pkgs.wezterm
   ];
 }
