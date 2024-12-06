@@ -15,6 +15,7 @@
   targets.genericLinux.enable = true;
 
   home.packages = [
+    pkgs.alacritty
     pkgs.bat
     pkgs.brave
     pkgs.brightnessctl
