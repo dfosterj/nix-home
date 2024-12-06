@@ -1,35 +1,30 @@
 # nix-home
 ## Installation
-use nix homemanager simply as a pkg management, to work with my dotfiles and be linux fluid
+this uses nix home manager simply as a pkg management, to work with my dotfiles and be linux fluid
 
 
-[Install the Nix package manager](https://nixos.org/download/):
+[Run Setup to install nix, home manager, nixgl. or run manually.](https://nixos.org/download/):
 ```bash
-sh <(curl -L https://nixos.org/nix/install) --daemon
-```
+#!/usr/bin/env bash
+# [Install the Nix package manager](https://nixos.org/download/):
+#sh <(curl -L https://nixos.org/nix/install) --daemon
 
-[Install Home Manager](https://nix-community.github.io/home-manager/index.xhtml#sec-install-standalone):
-```bash
+# [Install Home Manager](https://nix-community.github.io/home-manager/index.xhtml#sec-install-standalone):
 nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
-
 nix-channel --update
 nix-shell '<home-manager>' -A install
-```
 
-Enable experimental features for Nix:
-```bash
+#Enable experimental features for Nix:
 mkdir -p ~/.config/nix
 echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf
-```
 
-Install [nixGL](https://github.com/nix-community/nixGL), which is the program that [enables Hyprland](https://wiki.hyprland.org/Nix/Hyprland-on-other-distros/) to run:
-```bash
+#Install [nixGL](https://github.com/nix-community/nixGL), which is the program that [enables Hyprland](https://wiki.hyprland.org/Nix/Hyprland-on-other-distros/) to run:
 nix-channel --add https://github.com/nix-community/nixGL/archive/main.tar.gz nixgl && nix-channel --update
 nix-env -iA nixgl.auto.nixGLDefault
 ```
 
-Clone down this repo:
-```bash
+[Clone this repo.](https://nixos.org/download/):
+```
 git clone https://github.com/dfosterj/nix-home.git
 cd nix-home
 ```
@@ -43,20 +38,8 @@ Use vim (or whatever text editor you prefer) to edit `home.nix` and change the f
   home.homeDirectory = "/home/ded";
 ```
 
-clone repo to your user's home-manager config dir
-```bash
-git clone https://github.com/dfosterj/nix-hom ~/.config/home-manager
-```
 
-Copy these files to your home config:
-```bash
-mkdir -p ~/.config/home-manager
-cp -r * ~/.config/home-manager
-cp .zshrc ~/.config/home-manager
-cp gbwp2.jpg ~/Pictures
-```
-
-Install the home manager config:
+[Install the home manager config.](https://nixos.org/download/):
 ```bash
 home-manager switch
 ```
