@@ -1,10 +1,28 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
+
+let
+  # ...
+  nixgl = import <nixgl> {} ;
+  nixGLWrap = pkg: pkgs.runCommand "${pkg.name}-nixgl-wrapper" {} ''
+    mkdir $out
+    ln -s ${pkg}/* $out
+    rm $out/bin
+    mkdir $out/bin
+    for bin in ${pkg}/bin/*; do
+     wrapped_bin=$out/bin/$(basename $bin)
+     echo "exec ${lib.getExe nixgl.auto.nixGLDefault} $bin \$@" > $wrapped_bin
+     chmod +x $wrapped_bin
+    done
+  '';
+in
 {
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "ded";
   home.homeDirectory = "/home/ded";
+
+
 
   nixpkgs.config.allowUnfreePredicate = _: true;
 
@@ -15,7 +33,8 @@
   targets.genericLinux.enable = true;
 
   home.packages = [
-    pkgs.alacritty
+    nixgl.auto.nixGLDefault
+    # pkgs.alacritty
     pkgs.bat
     pkgs.brave
     pkgs.brightnessctl
@@ -37,7 +56,7 @@
     pkgs.gnumake
     pkgs.go
     pkgs.google-chrome
-    pkgs.kitty
+    # pkgs.kitty
     pkgs.lazygit
     pkgs.lsd
     pkgs.lua-language-server
@@ -58,6 +77,9 @@
     pkgs.waybar
     pkgs.wl-clipboard
     pkgs.yazi
-    pkgs.wezterm
+    # pkgs.wezterm
+    (nixGLWrap pkgs.kitty)
+    (nixGLWrap pkgs.alacritty)
+    (nixGLWrap pkgs.wezterm)
   ];
 }
