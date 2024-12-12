@@ -82,4 +82,9 @@ in
     (nixGLWrap pkgs.alacritty)
     (nixGLWrap pkgs.wezterm)
   ];
+
+  # Set Vim as the default editor
+  home.sessionVariables = {
+    EDITOR = "vim";
+  };
 }
