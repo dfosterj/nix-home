@@ -77,10 +77,14 @@ in
     pkgs.waybar
     pkgs.wl-clipboard
     pkgs.yazi
+    pkgs.xwayland
+    pkgs.wayland
     # pkgs.wezterm
     (nixGLWrap pkgs.kitty)
     (nixGLWrap pkgs.alacritty)
     (nixGLWrap pkgs.wezterm)
+    (nixGLWrap pkgs.hyprland)
+    (nixGLWrap pkgs.wofi)
   ];
 
   # Set Vim as the default editor
