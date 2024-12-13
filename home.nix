@@ -79,6 +79,8 @@ in
     pkgs.yazi
     pkgs.xwayland
     pkgs.wayland
+    pkgs.nwg-bar
+    pkgs.nwg-drawer
     # pkgs.wezterm
     (nixGLWrap pkgs.kitty)
     (nixGLWrap pkgs.alacritty)
