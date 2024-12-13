@@ -87,4 +87,11 @@ in
   home.sessionVariables = {
     EDITOR = "vim";
   };
+
+  programs.git = {
+    enable = true;
+    userName = "David Foster";
+    userEmail = "dfosterj@pm.me";
+  };
+
 }
