@@ -32,61 +32,59 @@ in
   programs.home-manager.enable = true;
   targets.genericLinux.enable = true;
 
-  home.packages = [
+  home.packages = with pkgs; [
     nixgl.auto.nixGLDefault
-    # pkgs.alacritty
-    pkgs.bat
-    pkgs.brave
-    pkgs.brightnessctl
-    pkgs.chromium
-    pkgs.cliphist
-    pkgs.clippy
-    pkgs.coreutils
-    pkgs.dunst
-    pkgs.eza
-    pkgs.fd
-    pkgs.fira-code-nerdfont
-    pkgs.fish
-    pkgs.flameshot
-    pkgs.flatpak
-    pkgs.fzf
-    pkgs.gh
-    pkgs.gh-dash
-    pkgs.git
-    pkgs.gnumake
-    pkgs.go
-    pkgs.google-chrome
-    # pkgs.kitty
-    pkgs.lazygit
-    pkgs.lsd
-    pkgs.lua-language-server
-    pkgs.neofetch
-    pkgs.neovim
-    pkgs.nodejs_22
-    pkgs.procps
-    pkgs.psmisc
-    pkgs.ripgrep
-    pkgs.skim
-    pkgs.spotify
-    pkgs.starship
-    pkgs.stylua
-    pkgs.swaybg
-    pkgs.swww
-    pkgs.unzip
-    pkgs.vscodium
-    pkgs.waybar
-    pkgs.wl-clipboard
-    pkgs.yazi
-    pkgs.xwayland
-    pkgs.wayland
-    pkgs.nwg-bar
-    pkgs.nwg-drawer
-    # pkgs.wezterm
-    (nixGLWrap pkgs.kitty)
-    (nixGLWrap pkgs.alacritty)
-    (nixGLWrap pkgs.wezterm)
-    (nixGLWrap pkgs.hyprland)
-    (nixGLWrap pkgs.wofi)
+    bat
+    brave
+    brightnessctl
+    chromium
+    cliphist
+    clippy
+    coreutils
+    dunst
+    eza
+    fd
+    fira-code-nerdfont
+    fish
+    firefox-beta
+    flameshot
+    flatpak
+    fzf
+    gh
+    gh-dash
+    git
+    gnumake
+    go
+    google-chrome
+    lazygit
+    lsd
+    lua-language-server
+    neofetch
+    neovim
+    nodejs_22
+    procps
+    psmisc
+    ripgrep
+    skim
+    spotify
+    starship
+    stylua
+    swaybg
+    swww
+    unzip
+    vscodium
+    waybar
+    wl-clipboard
+    yazi
+    xwayland
+    wayland
+    nwg-bar
+    nwg-drawer
+    (nixGLWrap kitty)
+    (nixGLWrap alacritty)
+    (nixGLWrap wezterm)
+    (nixGLWrap hyprland)
+    (nixGLWrap wofi)
   ];
 
   # Set Vim as the default editor
