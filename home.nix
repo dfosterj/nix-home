@@ -50,21 +50,12 @@ in
     flameshot
     flatpak
     fzf
-    gh
-    gh-dash
     git
-    gnumake
-    go
     google-chrome
-    lazygit
     lsd
-    lua-language-server
     neofetch
-    neovim
-    nodejs_22
     procps
     psmisc
-    ripgrep
     skim
     spotify
     starship
@@ -72,7 +63,6 @@ in
     swaybg
     swww
     unzip
-    vscodium
     waybar
     wl-clipboard
     yazi

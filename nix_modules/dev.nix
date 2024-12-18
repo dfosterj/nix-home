@@ -2,13 +2,23 @@
 
 {
   home.packages= with pkgs; [
-    ruby_3_2
     bundler
-    sqlite
-    nodejs
-    yarn
     gcc
+    gh
+    gh-dash
     gnumake
+    gnumake
+    go
+    lazygit
+    lua-language-server
+    neovim
+    nodejs
+    nodejs_22
+    ripgrep
+    ruby_3_2
+    sqlite
+    vscodium
+    yarn
   ];
 }
 
