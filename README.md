@@ -16,7 +16,14 @@ nix-channel --update
 nix-shell '<home-manager>' -A install
 ```
 
-Enable experimental features for Nix:
+
+[Install glib dev library for nixGL support](https://nix-community.github.io/home-manager/index.xhtml#sec-install-standalone):
+
+```bash
+sudo apt install -y libc6-dev
+```
+
+[Enable experimental features for Nix](https://nix-community.github.io/home-manager/index.xhtml#sec-install-standalone):
 ```bash
 mkdir -p ~/.config/nix
 echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf

@@ -34,6 +34,8 @@ in
 
   home.packages = with pkgs; [
     nixgl.auto.nixGLDefault
+    glibc
+    libglvnd
     bat
     brave
     brightnessctl
@@ -75,6 +77,7 @@ in
     (nixGLWrap wezterm)
     (nixGLWrap hyprland)
     (nixGLWrap wofi)
+    (nixGLWrap godot_4)
   ];
 
   # Set Vim as the default editor
