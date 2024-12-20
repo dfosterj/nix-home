@@ -15,6 +15,7 @@
     nodejs
     nodejs_22
     ripgrep
+    rustup
     ruby_3_2
     sqlite
     vscodium
