@@ -77,6 +77,8 @@ in
     (nixGLWrap wezterm)
     (nixGLWrap hyprland)
     (nixGLWrap wofi)
+    (nixGLWrap zenity)
+    (nixGLWrap godot_4)
   ];
 
   # Set Vim as the default editor

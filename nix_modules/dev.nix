@@ -2,7 +2,6 @@
 
 {
   home.packages= with pkgs; [
-    bundler
     gcc
     gh
     gh-dash
