@@ -11,6 +11,7 @@
     lazygit
     lua-language-server
     neovim
+    neovide
     nodejs
     nodejs_22
     ripgrep
