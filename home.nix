@@ -34,6 +34,7 @@ in
 
   home.packages = with pkgs; [
     nixgl.auto.nixGLDefault
+    nixgl.nixVulkanIntel
     glibc
     libglvnd
     bat
