@@ -26,7 +26,7 @@ in
 
   nixpkgs.config.allowUnfreePredicate = _: true;
 
-  home.stateVersion = "24.05";
+  home.stateVersion = "24.11";
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -75,6 +75,7 @@ in
     godot_4
     (nixGLWrap kitty)
     (nixGLWrap alacritty)
+    (nixGLWrap neovide)
     (nixGLWrap wezterm)
     (nixGLWrap hyprland)
     (nixGLWrap wofi)
