@@ -25,6 +25,7 @@ in
 
 
   nixpkgs.config.allowUnfreePredicate = _: true;
+  nixpkgs.config.allowUnfree = true;
 
   home.stateVersion = "24.11";
 
@@ -86,6 +87,7 @@ in
   # Set Vim as the default editor
   home.sessionVariables = {
     EDITOR = "vim";
+    NIXPKGS_ALLOW_UNFREE = 1;
   };
 
   programs.git = {
@@ -94,4 +96,7 @@ in
     userEmail = "dfosterj@pm.me";
   };
 
+  home.activation.createAppLinks = lib.hm.dag.entryAfter ["writeBoundary"] ''
+  ln -sf /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications/
+  '';
 }
