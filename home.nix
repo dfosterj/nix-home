@@ -99,4 +99,5 @@ in
   home.activation.createAppLinks = lib.hm.dag.entryAfter ["writeBoundary"] ''
   ln -sf /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications/
   '';
+
 }
