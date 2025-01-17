@@ -6,8 +6,8 @@
     };
 
   # Override the Alacritty desktop entry
-  xdg.desktopEntries.alacritty = {
-    name = "alacritty";
+  xdg.desktopEntries.Alacritty = {
+    name = "Alacritty";
     exec = "nixGL alacritty";
   };
 
@@ -18,7 +18,7 @@
   };
 
   # Override the WezTerm desktop entry
-  xdg.desktopEntries.wezterm = {
+  xdg.desktopEntries."org.wezfurlong.wezterm" = {
     name = "wezterm";
     exec = "nixGL wezterm";
   };
