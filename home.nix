@@ -61,7 +61,6 @@ in
     procps
     psmisc
     skim
-    spotify
     starship
     stylua
     swaybg
