@@ -42,7 +42,6 @@ in
     brave
     brightnessctl
     chromium
-    cliphist
     clippy
     coreutils
     dunst
@@ -55,7 +54,6 @@ in
     flatpak
     fzf
     git
-    google-chrome
     lsd
     neofetch
     procps
@@ -63,22 +61,13 @@ in
     skim
     starship
     stylua
-    swaybg
-    swww
     unzip
-    waybar
-    wl-clipboard
     yazi
-    xwayland
-    wayland
-    nwg-bar
-    nwg-drawer
     godot_4
     (nixGLWrap kitty)
     (nixGLWrap alacritty)
     (nixGLWrap neovide)
     (nixGLWrap wezterm)
-    (nixGLWrap hyprland)
     (nixGLWrap wofi)
     (nixGLWrap zenity)
   ];
