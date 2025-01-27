@@ -77,6 +77,7 @@ in
 	dunst
 	nitrogen
     bluetuith
+    pulsemixer
   ];
 
   # Set Vim as the default editor
