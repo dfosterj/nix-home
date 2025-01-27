@@ -44,7 +44,6 @@ in
     chromium
     clippy
     coreutils
-    dunst
     eza
     fd
     fira-code-nerdfont
@@ -70,6 +69,14 @@ in
     (nixGLWrap wezterm)
     (nixGLWrap wofi)
     (nixGLWrap zenity)
+	bspwm
+	sxhkd
+	polybarFull
+	picom
+	dmenu
+	dunst
+	nitrogen
+    bluetuith
   ];
 
   # Set Vim as the default editor
