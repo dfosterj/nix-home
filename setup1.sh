@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Install Nix as a multi-user (daemon) installation
 sh <(curl -L https://nixos.org/nix/install) --daemon

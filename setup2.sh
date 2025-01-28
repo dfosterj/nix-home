@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Add the Home Manager channel
 nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
