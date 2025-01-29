@@ -69,15 +69,16 @@ in
     (nixGLWrap wezterm)
     (nixGLWrap wofi)
     (nixGLWrap zenity)
-	bspwm
 	sxhkd
 	polybarFull
 	picom
 	dmenu
 	dunst
-	nitrogen
     bluetuith
     pulsemixer
+    tiramisu
+    feh
+    openbox
   ];
 
   # Set Vim as the default editor
@@ -92,8 +93,8 @@ in
     userEmail = "dfosterj@pm.me";
   };
 
+
   home.activation.createAppLinks = lib.hm.dag.entryAfter ["writeBoundary"] ''
   ln -sf /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications/
   '';
-
 }
