@@ -69,16 +69,14 @@ in
     (nixGLWrap wezterm)
     (nixGLWrap wofi)
     (nixGLWrap zenity)
+    bspwm
 	sxhkd
 	polybarFull
 	picom
-	dmenu
 	dunst
     bluetuith
     pulsemixer
-    tiramisu
     feh
-    openbox
   ];
 
   # Set Vim as the default editor
