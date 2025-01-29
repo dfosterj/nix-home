@@ -14,13 +14,15 @@ let
      chmod +x $wrapped_bin
     done
   '';
+  homeUsername = "ded";
+  homeDirectory = "/home/ded";
 in
 {
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "ded";
-  home.homeDirectory = "/home/ded";
+  home.username = homeUsername;
+  home.homeDirectory = homeDirectory;
 
 
 
@@ -80,12 +82,12 @@ in
     dmenu
   ];
 
-  # Set Vim as the default editor
+  # Set Vim as the default editor and other session vars
   home.sessionVariables = {
     EDITOR = "vim";
     NIXPKGS_ALLOW_UNFREE = 1;
-    GEM_HOME = "$HOME/.rubygems";
-    PATH = "${pkgs.ruby}/bin:$HOME/.rubygems/bin:$PATH";
+    GEM_HOME = "${homeDirectory}/.rubygems";
+    PATH = "${pkgs.ruby}/bin:${homeDirectory}/.rubygems/bin:$PATH";
   };
 
   programs.git = {
@@ -97,7 +99,7 @@ in
   home.file.".gemrc".text = ''
     gem: --no-document
     install: --user-install
-    gemhome: $HOME/.rubygems
+    gemhome: ${homeDirectory}/.rubygems
   '';
 
   home.activation.createAppLinks = lib.hm.dag.entryAfter ["writeBoundary"] ''
