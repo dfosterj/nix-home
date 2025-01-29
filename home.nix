@@ -77,12 +77,15 @@ in
     bluetuith
     pulsemixer
     feh
+    dmenu
   ];
 
   # Set Vim as the default editor
   home.sessionVariables = {
     EDITOR = "vim";
     NIXPKGS_ALLOW_UNFREE = 1;
+    GEM_HOME = "$HOME/.rubygems";
+    PATH = "${pkgs.ruby}/bin:$HOME/.rubygems/bin:$PATH";
   };
 
   programs.git = {
@@ -91,6 +94,11 @@ in
     userEmail = "dfosterj@pm.me";
   };
 
+  home.file.".gemrc".text = ''
+    gem: --no-document
+    install: --user-install
+    gemhome: $HOME/.rubygems
+  '';
 
   home.activation.createAppLinks = lib.hm.dag.entryAfter ["writeBoundary"] ''
   ln -sf /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications/
