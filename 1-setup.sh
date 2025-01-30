@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+#setup nix experimental features
+DIR="$HOME/.config/nix"; [ ! -d "$DIR" ] && mkdir "$DIR" && ls -lad "$DIR" || echo "found $DIR dir, skipping.."
+echo 'experimental-features = nix-command flakes' > $DIR/nix.conf
+
 # Install Nix as a multi-user (daemon) installation
 sh <(curl -L https://nixos.org/nix/install) --daemon
 
