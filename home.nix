@@ -105,6 +105,7 @@ in
   '';
 
   home.activation.createAppLinks = lib.hm.dag.entryAfter ["writeBoundary"] ''
+  DIR="$HOME/.local/share/applications"; [ ! -d "$DIR" ] && mkdir -p "$DIR" && ls -lad "$DIR" || echo "found $DIR dir, skipping.."
   ln -sf /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications/
   '';
 }
