@@ -71,10 +71,10 @@ in
     (nixGLWrap wezterm)
     (nixGLWrap wofi)
     (nixGLWrap zenity)
+    (nixGLWrap picom)
     bspwm
 	sxhkd
 	polybarFull
-	picom
 	dunst
     bluetuith
     pulsemixer
@@ -83,8 +83,11 @@ in
     rofi
   ];
 
+
   # Set Vim as the default editor and other session vars
   home.sessionVariables = {
+	LANG = "en_US.UTF-8";  # Set default language
+    LC_ALL = "en_US.UTF-8";  # Ensure all categories use the same locale
     EDITOR = "vim";
     NIXPKGS_ALLOW_UNFREE = 1;
     GEM_HOME = "${homeDirectory}/.rubygems";
