@@ -80,6 +80,7 @@ in
     pulsemixer
     feh
     dmenu
+    rofi
   ];
 
   # Set Vim as the default editor and other session vars
