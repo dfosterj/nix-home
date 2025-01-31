@@ -82,6 +82,7 @@ in
     dmenu
     rofi
     nwg-drawer
+    clipmenu
   ];
 
 
