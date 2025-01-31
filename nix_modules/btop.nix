@@ -5,5 +5,5 @@
   };
 
   home.file.".config/btop/themes/nord.theme".text =
-    builtins.readFile ../appdata/btop/themes/nord.theme;
+    builtins.readFile ../dotfiles/btop/themes/nord.theme;
 }
