@@ -81,6 +81,7 @@ in
     feh
     dmenu
     rofi
+    nwg-drawer
   ];
 
 
