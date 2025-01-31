@@ -83,6 +83,7 @@ in
     rofi
     nwg-drawer
     clipmenu
+	bash
   ];
 
 

@@ -1,7 +1,7 @@
 { ... }: {
   imports = [
     ./desktop_entries.nix
-    # ./systemd.nix
+    ./systemd_unit_files.nix
   ];
 }
 
