@@ -14,22 +14,27 @@ let
      chmod +x $wrapped_bin
     done
   '';
+  nixVulkanIntelWrap = pkg: pkgs.runCommand "${pkg.name}-nixvulkantinel-wrapper" {} ''
+    mkdir $out
+    ln -s ${pkg}/* $out
+    rm $out/bin
+    mkdir $out/bin
+    for bin in ${pkg}/bin/*; do
+     wrapped_bin=$out/bin/$(basename $bin)
+     echo "exec ${lib.getExe nixgl.nixVulkanIntel} $bin \$@" > $wrapped_bin
+     chmod +x $wrapped_bin
+    done
+  '';
   homeUsername = "ded";
   homeDirectory = "/home/ded";
 in
 {
-
-  # Home Manager needs a bit of information about you and the
-  # paths it should manage.
   home.username = homeUsername;
   home.homeDirectory = homeDirectory;
-
-
-
+  home.stateVersion = "24.11";
   nixpkgs.config.allowUnfreePredicate = _: true;
   nixpkgs.config.allowUnfree = true;
 
-  home.stateVersion = "24.11";
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -38,21 +43,31 @@ in
   home.packages = with pkgs; [
     nixgl.auto.nixGLDefault
     nixgl.nixVulkanIntel
+	# apps
+    brave
+    chromium
+    firefox-beta
+    flameshot
+    (nixGLWrap alacritty)
+    (nixGLWrap kitty)
+    (nixGLWrap neovide)
+    (nixGLWrap picom)
+    (nixGLWrap wezterm)
+    (nixGLWrap wofi)
+    (nixGLWrap zenity)
+    (nixVulkanIntelWrap godot_4)
+	# lib
+    flatpak
+    bat
     glibc
     libglvnd
-    bat
-    brave
     brightnessctl
-    chromium
     clippy
     coreutils
     eza
     fd
     fira-code-nerdfont
     fish
-    firefox-beta
-    flameshot
-    flatpak
     fzf
     git
     lsd
@@ -64,25 +79,34 @@ in
     stylua
     unzip
     yazi
-    godot_4
-    (nixGLWrap kitty)
-    (nixGLWrap alacritty)
-    (nixGLWrap neovide)
-    (nixGLWrap wezterm)
-    (nixGLWrap wofi)
-    (nixGLWrap zenity)
-    (nixGLWrap picom)
-    bspwm
-	sxhkd
-	polybarFull
+	#dev
+    gcc
+    gh
+    gh-dash
+    gnumake
+    gnumake
+    go
+    lazygit
+    lua-language-server
+    nodejs
+    nodejs_22
+    ripgrep
+    ruby_3_2
+    sqlite
+    vscodium
+    yarn
+	# wm
 	dunst
+	polybarFull
+	sxhkd
     bluetuith
-    pulsemixer
-    feh
-    dmenu
-    rofi
-    nwg-drawer
+    bspwm
     clipmenu
+    dmenu
+    feh
+    nwg-drawer
+    pulsemixer
+    rofi
   ];
 
 
