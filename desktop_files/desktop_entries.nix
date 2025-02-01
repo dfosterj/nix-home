@@ -7,7 +7,7 @@
   };
 
   # Override the Neovide desktop entry
-  xdg.desktopEntries.godot4 = {
+  xdg.desktopEntries.godot_4 = {
     name = "godot4";
     exec = "nixVulkanIntel godot4";
     icon = "godot4";
