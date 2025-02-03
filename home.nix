@@ -84,7 +84,6 @@ in
     gh
     gh-dash
     gnumake
-    gnumake
     go
     lazygit
     lua-language-server
