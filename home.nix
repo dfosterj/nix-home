@@ -107,6 +107,7 @@ in
     nwg-drawer
     pulsemixer
     rofi
+	escrotum
   ];
 
 

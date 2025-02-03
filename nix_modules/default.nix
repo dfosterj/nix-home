@@ -4,6 +4,7 @@
     ./btop.nix
     ./neovim.nix
     ./vim.nix
+    ./work.nix
   ];
 }
 
