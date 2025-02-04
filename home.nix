@@ -43,11 +43,15 @@ in
   home.packages = with pkgs; [
     nixgl.auto.nixGLDefault
     nixgl.nixVulkanIntel
-	# apps
+	# == App ==
     brave
     chromium
     firefox-beta
     flameshot
+	timeshift
+    tor
+    torsocks
+    tor-browser
     (nixGLWrap alacritty)
     (nixGLWrap kitty)
     (nixGLWrap neovide)
@@ -56,11 +60,12 @@ in
     (nixGLWrap wofi)
     (nixGLWrap zenity)
     (nixVulkanIntelWrap godot_4)
-	# lib
+	# == Lib ==
     flatpak
     bat
     glibc
     libglvnd
+    xorg.libxcb
     brightnessctl
     clippy
     coreutils
@@ -79,7 +84,7 @@ in
     stylua
     unzip
     yazi
-	#dev
+	# == Dev ==
     gcc
     gh
     gh-dash
@@ -94,7 +99,7 @@ in
     sqlite
     vscodium
     yarn
-	# wm
+	# == WM ==
 	dunst
 	polybarFull
 	sxhkd
