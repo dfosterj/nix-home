@@ -88,6 +88,7 @@ in
     gcc
     gh
     gh-dash
+    glab
     gnumake
     go
     lazygit
