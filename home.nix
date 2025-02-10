@@ -104,6 +104,7 @@ in
     yarn
 	# == WM ==
 	dunst
+	escrotum
 	polybarFull
 	sxhkd
     bluetuith
@@ -114,7 +115,7 @@ in
     nwg-drawer
     pulsemixer
     rofi
-	escrotum
+    slock
   ];
 
 
