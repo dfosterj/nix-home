@@ -63,6 +63,7 @@ in
 	# == Lib ==
     flatpak
     bat
+	cava
     glibc
     libglvnd
     xorg.libxcb
@@ -98,6 +99,7 @@ in
     ripgrep
     ruby_3_2
     sqlite
+	tmux
     vscodium
     yarn
 	# == WM ==
