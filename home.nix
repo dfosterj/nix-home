@@ -112,7 +112,6 @@ in
     clipmenu
     dmenu
     feh
-    networkmanager
     networkmanager_dmenu
     nwg-drawer
     pulsemixer
