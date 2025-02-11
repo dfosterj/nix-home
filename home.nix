@@ -119,6 +119,7 @@ in
     pulsemixer
     rofi
     slock
+    xautolock
   ];
 
 
