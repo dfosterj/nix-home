@@ -44,14 +44,6 @@ in
     nixgl.auto.nixGLDefault
     nixgl.nixVulkanIntel
 	# == App ==
-    brave
-    chromium
-    firefox-beta
-    flameshot
-	timeshift
-    tor
-    torsocks
-    tor-browser
     (nixGLWrap alacritty)
     (nixGLWrap kitty)
     (nixGLWrap neovide)
@@ -59,7 +51,17 @@ in
     (nixGLWrap wezterm)
     (nixGLWrap wofi)
     (nixGLWrap zenity)
-    (nixVulkanIntelWrap godot_4)
+	timeshift
+    brave
+    chromium
+    firefox-beta
+    flameshot
+    godot_4
+    nix-search-cli
+    tidal-hifi
+    tor
+    tor-browser
+    torsocks
 	# == Lib ==
     flatpak
     bat
