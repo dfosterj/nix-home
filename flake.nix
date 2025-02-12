@@ -29,7 +29,6 @@
         modules = [
           ./home.nix
           ./nix_modules
-          ./desktop_files
         ];
 
       };
