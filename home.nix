@@ -41,9 +41,10 @@ in
   targets.genericLinux.enable = true;
 
   home.packages = with pkgs; [
+    # == NixGL ==
     nixgl.auto.nixGLDefault
     nixgl.nixVulkanIntel
-	# == App ==
+    # == App ==
     (nixGLWrap alacritty)
     (nixGLWrap kitty)
     (nixGLWrap neovide)
@@ -51,75 +52,81 @@ in
     (nixGLWrap wezterm)
     (nixGLWrap wofi)
     (nixGLWrap zenity)
-	timeshift
+    bat
+    bluetuith
     brave
+    brightnessctl
+    cava
     chromium
+    cliphist
+    clipmenu
+    clippy
+    dunst
+    escrotum
+    eza
+    fd
     firefox-beta
+    fish
     flameshot
+    flatpak
+    fzf
     godot_4
+    lazygit
+    lsd
+    neofetch
+    networkmanager_dmenu
     nix-search-cli
+    nwg-drawer
+    rofi
+    skim
+    slock
+    starship
     tidal-hifi
+    tmux
     tor
     tor-browser
     torsocks
-	# == Lib ==
-    flatpak
-    bat
-	cava
-    glibc
-    libglvnd
-    xorg.libxcb
-    brightnessctl
-    clippy
+    unzip
+    vscodium
+    waybar
+    xautolock
+    yazi
+    # == Lib ==
     coreutils
-    eza
-    fd
-    fira-code-nerdfont
-    fish
-    fzf
-    git
-    lsd
-    neofetch
+    glibc
+    killall
+    libglvnd
     procps
     psmisc
-    skim
-    starship
-    stylua
-    unzip
-    yazi
-	# == Dev ==
+    pulsemixer
+    ripgrep
+    # == Dev ==
     gcc
     gh
     gh-dash
+    git
     glab
     gnumake
     go
-    lazygit
     lua-language-server
     nodejs
     nodejs_22
-    ripgrep
+    python3Full
     ruby_3_2
     sqlite
-	tmux
-    vscodium
+    stylua
+    vimPlugins.vim-plug
     yarn
-	# == WM ==
-	dunst
-	escrotum
-	polybarFull
-	sxhkd
-    bluetuith
+    # == WM ==
     bspwm
-    clipmenu
     dmenu
     feh
-    networkmanager_dmenu
-    nwg-drawer
-    pulsemixer
-    rofi
-    slock
-    xautolock
+    polybarFull
+    sway
+    swww
+    sxhkd
+    timeshift
+    xorg.libxcb
   ];
 
 
