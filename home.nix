@@ -4,10 +4,13 @@
   home.stateVersion = "24.11";
   home.username = "ded";
   home.homeDirectory = "/home/ded";
-  programs.home-manager.enable = true;
 
   nixpkgs.config.allowUnfreePredicate = _: true;
   nixpkgs.config.allowUnfree = true;
+
+  imports = [
+	./nix_modules
+  ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -17,8 +20,8 @@
   home.sessionVariables = {
     EDITOR = "vim";
     NIXPKGS_ALLOW_UNFREE = 1;
-    GEM_HOME = "${homeDirectory}/.rubygems";
-    PATH = "${pkgs.ruby}/bin:${homeDirectory}/.rubygems/bin:$PATH";
+    GEM_HOME = "${config.home.homeDirectory}/.rubygems";
+    PATH = "${pkgs.ruby}/bin:${config.home.homeDirectory}/.rubygems/bin:$PATH";
   };
 
   programs.git = {
@@ -30,7 +33,7 @@
   home.file.".gemrc".text = ''
     gem: --no-document
     install: --user-install
-    gemhome: ${homeDirectory}/.rubygems
+    gemhome: ${config.home.homeDirectory}/.rubygems
   '';
 
 }
